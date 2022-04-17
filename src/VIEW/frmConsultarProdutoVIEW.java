@@ -43,6 +43,8 @@ public class frmConsultarProdutoVIEW extends javax.swing.JFrame {
 
         lblPesquisar.setText("Pesquisar:");
 
+        btnBuscar.setBackground(new java.awt.Color(0, 70, 70));
+        btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
         btnBuscar.setText("Buscar");
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

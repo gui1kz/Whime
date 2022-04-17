@@ -38,9 +38,10 @@ public class frmLoginVIEW extends javax.swing.JFrame {
         lblSenha = new javax.swing.JLabel();
         txtUsuario = new javax.swing.JTextField();
         lblLogin = new javax.swing.JLabel();
-        lblAcesseOWhime = new javax.swing.JLabel();
-        lblBemVindo = new javax.swing.JLabel();
         lblCreateAccount = new java.awt.Label();
+        jPanel1 = new javax.swing.JPanel();
+        lblBemVindo = new javax.swing.JLabel();
+        lblAcesseOWhime = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -67,14 +68,6 @@ public class frmLoginVIEW extends javax.swing.JFrame {
         lblLogin.setFont(new java.awt.Font("Segoe UI Emoji", 0, 14)); // NOI18N
         lblLogin.setText("Login: ");
 
-        lblAcesseOWhime.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
-        lblAcesseOWhime.setForeground(new java.awt.Color(0, 153, 153));
-        lblAcesseOWhime.setText("                                        ACESSE O WHIME");
-
-        lblBemVindo.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
-        lblBemVindo.setForeground(new java.awt.Color(0, 153, 153));
-        lblBemVindo.setText("      Bem-vindo");
-
         lblCreateAccount.setAlignment(java.awt.Label.CENTER);
         lblCreateAccount.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblCreateAccount.setText("Não possui conta? Crie já!");
@@ -84,32 +77,56 @@ public class frmLoginVIEW extends javax.swing.JFrame {
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+
+        lblBemVindo.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        lblBemVindo.setForeground(new java.awt.Color(255, 255, 255));
+        lblBemVindo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblBemVindo.setText("Login");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblBemVindo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(lblBemVindo)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        lblAcesseOWhime.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
+        lblAcesseOWhime.setForeground(new java.awt.Color(0, 153, 153));
+        lblAcesseOWhime.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAcesseOWhime.setText("ACESSE O WHIME");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblAcesseOWhime, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblBemVindo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
                     .addComponent(lblLogin)
                     .addComponent(lblSenha)
                     .addComponent(txtSenha)
                     .addComponent(btnEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblEsqueceuSuaSenha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtUsuario, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblCreateAccount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblCreateAccount, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE))
                 .addContainerGap(62, Short.MAX_VALUE))
+            .addComponent(lblAcesseOWhime, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblBemVindo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblAcesseOWhime)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                 .addComponent(lblLogin)
                 .addGap(2, 2, 2)
                 .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -181,6 +198,7 @@ public class frmLoginVIEW extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEntrar;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblAcesseOWhime;
     private javax.swing.JLabel lblBemVindo;
     private java.awt.Label lblCreateAccount;
