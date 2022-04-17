@@ -45,7 +45,7 @@ public class frmTelaRelatoriosVIEW extends javax.swing.JFrame {
         btnFechar = new javax.swing.JButton();
         btnBuscar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         cabecalhoRelatorio.setBackground(new java.awt.Color(0, 102, 102));
         cabecalhoRelatorio.setForeground(new java.awt.Color(255, 255, 255));
@@ -282,11 +282,11 @@ public class frmTelaRelatoriosVIEW extends javax.swing.JFrame {
             .addComponent(lblVendas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
         );
 
-        btnFechar.setBackground(new java.awt.Color(0, 70, 70));
+        btnFechar.setBackground(new java.awt.Color(0, 102, 102));
         btnFechar.setForeground(new java.awt.Color(255, 255, 255));
         btnFechar.setText("Fechar");
 
-        btnBuscar.setBackground(new java.awt.Color(0, 70, 70));
+        btnBuscar.setBackground(new java.awt.Color(0, 102, 102));
         btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
         btnBuscar.setText("Buscar");
 
@@ -348,6 +348,7 @@ public class frmTelaRelatoriosVIEW extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtDataInicialFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDataInicialFocusLost

@@ -28,7 +28,6 @@ public class frmTelaVendasVIEW extends javax.swing.JFrame {
 
         cabecalhoVendas = new javax.swing.JPanel();
         lblVendas = new javax.swing.JLabel();
-        btnSair = new javax.swing.JButton();
         scrollpaneProdutos = new javax.swing.JScrollPane();
         tableCliente = new javax.swing.JTable();
         lblPesquisar = new javax.swing.JLabel();
@@ -54,38 +53,25 @@ public class frmTelaVendasVIEW extends javax.swing.JFrame {
         txtTotal = new javax.swing.JTextField();
         btnCadastrarCPF = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         cabecalhoVendas.setBackground(new java.awt.Color(0, 102, 102));
 
         lblVendas.setForeground(new java.awt.Color(255, 255, 255));
         lblVendas.setText("VENDAS");
 
-        btnSair.setBackground(new java.awt.Color(0, 102, 102));
-        btnSair.setForeground(new java.awt.Color(204, 204, 204));
-        btnSair.setText("Sair");
-        btnSair.setBorder(null);
-        btnSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSairActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout cabecalhoVendasLayout = new javax.swing.GroupLayout(cabecalhoVendas);
         cabecalhoVendas.setLayout(cabecalhoVendasLayout);
         cabecalhoVendasLayout.setHorizontalGroup(
             cabecalhoVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cabecalhoVendasLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(362, Short.MAX_VALUE)
                 .addComponent(lblVendas)
-                .addGap(332, 332, 332)
-                .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(371, 371, 371))
         );
         cabecalhoVendasLayout.setVerticalGroup(
             cabecalhoVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cabecalhoVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(lblVendas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(lblVendas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         tableCliente.setModel(new javax.swing.table.DefaultTableModel(
@@ -100,7 +86,7 @@ public class frmTelaVendasVIEW extends javax.swing.JFrame {
 
         lblPesquisar.setText("Pesquisar:");
 
-        btnBuscar.setBackground(new java.awt.Color(0, 70, 70));
+        btnBuscar.setBackground(new java.awt.Color(0, 102, 102));
         btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
         btnBuscar.setText("Buscar");
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -135,7 +121,7 @@ public class frmTelaVendasVIEW extends javax.swing.JFrame {
             }
         });
 
-        btnAdicionar.setBackground(new java.awt.Color(0, 70, 70));
+        btnAdicionar.setBackground(new java.awt.Color(0, 102, 102));
         btnAdicionar.setForeground(new java.awt.Color(255, 255, 255));
         btnAdicionar.setText("Adicionar");
         btnAdicionar.addActionListener(new java.awt.event.ActionListener() {
@@ -150,7 +136,7 @@ public class frmTelaVendasVIEW extends javax.swing.JFrame {
         lblTroco.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTroco.setText("Troco");
 
-        btnFinalizarVenda.setBackground(new java.awt.Color(0, 70, 70));
+        btnFinalizarVenda.setBackground(new java.awt.Color(0, 102, 102));
         btnFinalizarVenda.setForeground(new java.awt.Color(255, 255, 255));
         btnFinalizarVenda.setText("Finalizar venda");
         btnFinalizarVenda.addActionListener(new java.awt.event.ActionListener() {
@@ -159,7 +145,7 @@ public class frmTelaVendasVIEW extends javax.swing.JFrame {
             }
         });
 
-        btnRemover.setBackground(new java.awt.Color(0, 70, 70));
+        btnRemover.setBackground(new java.awt.Color(0, 102, 102));
         btnRemover.setForeground(new java.awt.Color(255, 255, 255));
         btnRemover.setText("Remover");
         btnRemover.addActionListener(new java.awt.event.ActionListener() {
@@ -170,12 +156,12 @@ public class frmTelaVendasVIEW extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(243, 243, 243));
 
-        lblTotal.setForeground(new java.awt.Color(0, 70, 70));
+        lblTotal.setForeground(new java.awt.Color(0, 102, 102));
         lblTotal.setText("Total");
 
         txtTotal.setBackground(new java.awt.Color(243, 243, 243));
         txtTotal.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        txtTotal.setForeground(new java.awt.Color(0, 70, 70));
+        txtTotal.setForeground(new java.awt.Color(0, 102, 102));
         txtTotal.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtTotal.setText("20.022,00");
         txtTotal.setBorder(null);
@@ -205,9 +191,14 @@ public class frmTelaVendasVIEW extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        btnCadastrarCPF.setBackground(new java.awt.Color(0, 70, 70));
+        btnCadastrarCPF.setBackground(new java.awt.Color(0, 102, 102));
         btnCadastrarCPF.setForeground(new java.awt.Color(255, 255, 255));
         btnCadastrarCPF.setText("Cadastrar");
+        btnCadastrarCPF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarCPFActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -220,17 +211,13 @@ public class frmTelaVendasVIEW extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblPesquisar)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(txtPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblCPF)))
-                            .addComponent(scrollpaneProdutos))
+                                .addComponent(txtPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(94, 94, 94)
+                                .addComponent(txtCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(scrollpaneProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, 666, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnAdicionar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -258,28 +245,32 @@ public class frmTelaVendasVIEW extends javax.swing.JFrame {
                             .addComponent(txtTroco, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
                             .addComponent(lblTroco, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnFinalizarVenda)))
+                        .addComponent(btnFinalizarVenda))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblPesquisar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblCPF)
+                        .addGap(232, 232, 232)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(cabecalhoVendas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblPesquisar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblCPF)
+                            .addComponent(lblPesquisar)
+                            .addComponent(lblCPF))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnCadastrarCPF))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btnCadastrarCPF))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -317,6 +308,7 @@ public class frmTelaVendasVIEW extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
@@ -343,9 +335,10 @@ public class frmTelaVendasVIEW extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnFinalizarVendaActionPerformed
 
-    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
-
-    }//GEN-LAST:event_btnSairActionPerformed
+    private void btnCadastrarCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarCPFActionPerformed
+        frmCadastrarClienteVIEW telaCadastrarCliente = new frmCadastrarClienteVIEW ();   
+        telaCadastrarCliente.setVisible(true);
+    }//GEN-LAST:event_btnCadastrarCPFActionPerformed
 
     /**
      * @param args the command line arguments
@@ -389,7 +382,6 @@ public class frmTelaVendasVIEW extends javax.swing.JFrame {
     private javax.swing.JButton btnCadastrarCPF;
     private javax.swing.JButton btnFinalizarVenda;
     private javax.swing.JButton btnRemover;
-    private javax.swing.JButton btnSair;
     private javax.swing.JPanel cabecalhoVendas;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblCPF;

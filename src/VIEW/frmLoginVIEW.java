@@ -45,7 +45,9 @@ public class frmLoginVIEW extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        btnEntrar.setBackground(new java.awt.Color(0, 70, 70));
         btnEntrar.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        btnEntrar.setForeground(new java.awt.Color(255, 255, 255));
         btnEntrar.setText("Entrar");
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,7 +79,7 @@ public class frmLoginVIEW extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
 
         lblBemVindo.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         lblBemVindo.setForeground(new java.awt.Color(255, 255, 255));
@@ -144,6 +146,7 @@ public class frmLoginVIEW extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
