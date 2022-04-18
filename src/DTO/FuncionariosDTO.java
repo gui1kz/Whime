@@ -2,7 +2,7 @@ package DTO;
 
 import VIEW.frmLoginVIEW;
 
-public class CadastrarFuncionarioDTO {
+public class FuncionariosDTO {
 
     private String FirstName, LastName, User, Password;
     private Long CPF;

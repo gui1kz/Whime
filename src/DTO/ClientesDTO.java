@@ -2,7 +2,7 @@ package DTO;
 
 import java.util.Date;
 
-public class CadastrarClienteDTO {
+public class ClientesDTO {
 
     private Date date = new Date();
     private int numCasa;
@@ -14,7 +14,7 @@ public class CadastrarClienteDTO {
     private String genero;
     private String UF;
     private Long CPF;
-    private Long CEP;
+    private Integer CEP;
     private String telefone;
 
     public Date getDate() {
@@ -105,11 +105,11 @@ public class CadastrarClienteDTO {
         this.bairro = bairro;
     }
 
-    public Long getCEP() {
+    public Integer getCEP() {
         return CEP;
     }
 
-    public void setCEP(Long CEP) {
+    public void setCEP(Integer CEP) {
         this.CEP = CEP;
     }
 

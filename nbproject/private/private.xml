@@ -3,8 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/RENATO%20LIMA/OneDrive/Documentos/NetBeansProjects/Whime-master/src/VIEW/frmCadastrarClienteVIEW.java</file>
-            <file>file:/C:/Users/RENATO%20LIMA/OneDrive/Documentos/NetBeansProjects/Whime-master/src/VIEW/frmTelaVendasVIEW.java</file>
+            <file>file:/C:/Users/gui1kz/Documents/NetBeansProjects/Whime/src/VIEW/frmCadastrarProdutoVIEW.java</file>
+            <file>file:/C:/Users/gui1kz/Documents/NetBeansProjects/Whime/src/DTO/ProdutosDTO.java</file>
+            <file>file:/C:/Users/gui1kz/Documents/NetBeansProjects/Whime/src/VIEW/frmTelaRelatoriosVIEW.java</file>
+            <file>file:/C:/Users/gui1kz/Documents/NetBeansProjects/Whime/src/DTO/ClientesDTO.java</file>
+            <file>file:/C:/Users/gui1kz/Documents/NetBeansProjects/Whime/src/VIEW/frmCadastrarClienteVIEW.java</file>
+            <file>file:/C:/Users/gui1kz/Documents/NetBeansProjects/Whime/src/DTO/VendasDTO.java</file>
+            <file>file:/C:/Users/gui1kz/Documents/NetBeansProjects/Whime/src/DAO/CadastrarClienteDAO.java</file>
+            <file>file:/C:/Users/gui1kz/Documents/NetBeansProjects/Whime/src/DTO/RelatoriosDTO.java</file>
+            <file>file:/C:/Users/gui1kz/Documents/NetBeansProjects/Whime/src/VIEW/frmTelaVendasVIEW.java</file>
         </group>
     </open-files>
 </project-private>

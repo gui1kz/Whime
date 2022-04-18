@@ -1,7 +1,7 @@
 package VIEW;
 
 import DAO.CadastrarClienteDAO;
-import DTO.CadastrarClienteDTO;
+import DTO.ClientesDTO;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -221,9 +221,14 @@ public class frmCadastrarClienteVIEW extends javax.swing.JFrame {
             .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
         );
 
-        comboxGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "Masculino", "Feminino" }));
+        comboxGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Masculino", "Feminino" }));
+        comboxGenero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboxGeneroActionPerformed(evt);
+            }
+        });
 
-        comboxEstadoCivil.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Solteiro (a)", "Casado (a)", "Divorciado (a)", "Viuvo (a)" }));
+        comboxEstadoCivil.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "Solteiro (a)", "Casado (a)", "Divorciado (a)", "Viuvo (a)" }));
         comboxEstadoCivil.setMinimumSize(new java.awt.Dimension(51, 22));
         comboxEstadoCivil.setPreferredSize(new java.awt.Dimension(51, 22));
         comboxEstadoCivil.addActionListener(new java.awt.event.ActionListener() {
@@ -413,6 +418,10 @@ public class frmCadastrarClienteVIEW extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_comboxEstadoCivilActionPerformed
 
+    private void comboxGeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboxGeneroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboxGeneroActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -497,7 +506,7 @@ public class frmCadastrarClienteVIEW extends javax.swing.JFrame {
     public void CadastrarCliente() throws ParseException {
         String nasc;
         Date dataNascimento = new Date();
-        Long CEP;
+        int CEP;
         int numCasa;
         String nomeCompleto;
         String UF;
@@ -509,36 +518,42 @@ public class frmCadastrarClienteVIEW extends javax.swing.JFrame {
         Long CPF;
         String telefone;
         
+        nomeCompleto = txtNome.getText();
+        CPF = Long.parseLong(txtCPF.getText().replace(".", "").replace("-", ""));
         SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
         nasc = txtDataNascimento.getText();
         dataNascimento = sdf1.parse(nasc);
-        numCasa = Integer.parseInt(txtCEP.getText());
-        nomeCompleto = txtNome.getText();
-        email = txtEmail.getText();
-        bairro = txtBairro.getText();
-        endereco = txtEndereço.getText();
-        estadoCivil = comboxEstadoCivil.getSelectedItem().toString();
-        genero = comboxGenero.getSelectedItem().toString();
-        CPF = Long.parseLong(txtCPF.getText().replace(".", "").replace("-", ""));
-        CEP = Long.parseLong(txtCEP.getText().replace("-", ""));
         telefone = txtCelular.getText();
+        email = txtEmail.getText();
+        genero = comboxGenero.getSelectedItem().toString();
+        endereco = txtEndereço.getText();
+        numCasa = Integer.parseInt(txtCEP.getText());
+        CEP = Integer.parseInt(txtCEP.getText().replaceAll("-",""));
+        bairro = txtBairro.getText();
         UF = comboxUF.getSelectedItem().toString();
-        
-        CadastrarClienteDTO cdstCliente = new CadastrarClienteDTO();
-        cdstCliente.setCEP(CEP);
+        estadoCivil = comboxEstadoCivil.getSelectedItem().toString();
+         
+        ClientesDTO cdstCliente = new ClientesDTO();
+        cdstCliente.setNomeCompleto(nomeCompleto);
         cdstCliente.setCPF(CPF);
         cdstCliente.setDate(dataNascimento);
-        cdstCliente.setEmail(email);
-        cdstCliente.setEstadoCivil(estadoCivil);
-        cdstCliente.setGenero(genero);
-        cdstCliente.setNomeCompleto(nomeCompleto);
-        cdstCliente.setEndereco(endereco);
-        cdstCliente.setBairro(bairro);
-        cdstCliente.setNumCasa(numCasa);
         cdstCliente.setTelefone(telefone);
+        cdstCliente.setEmail(email);
+        cdstCliente.setGenero(genero);
+        cdstCliente.setEndereco(endereco);
+        cdstCliente.setNumCasa(numCasa);
+        cdstCliente.setCEP(CEP);
+        cdstCliente.setBairro(bairro);
         cdstCliente.setUF(UF);
+        cdstCliente.setEstadoCivil(estadoCivil);
+        
+
         CadastrarClienteDAO cdstClienteDAO = new CadastrarClienteDAO();
         cdstClienteDAO.CadastrarCliente(cdstCliente);
         JOptionPane.showMessageDialog(null, "Cliente cadastrado!");
+        frmConsultarClienteVIEW consultaClienteVIEW = new frmConsultarClienteVIEW();
+        consultaClienteVIEW.setVisible(true);
+        
+        dispose();
     }
 }

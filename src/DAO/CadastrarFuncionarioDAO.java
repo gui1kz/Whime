@@ -1,6 +1,6 @@
 package DAO;
 
-import DTO.CadastrarFuncionarioDTO;
+import DTO.FuncionariosDTO;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
@@ -11,7 +11,7 @@ public class CadastrarFuncionarioDAO {
     Connection conn;
     PreparedStatement pstm;
 
-    public void createUser(CadastrarFuncionarioDTO objsigndto) {
+    public void createUser(FuncionariosDTO objsigndto) {
 
         String sql = "INSERT INTO funcionarios(nome,sobrenome, CPF, usuario, senha) VALUES (?, ?, ?, ?, ?);";
         conn = new ConexaoDAO().conectDB();

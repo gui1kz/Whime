@@ -5,7 +5,7 @@
 package VIEW;
 
 import DAO.CadastrarFuncionarioDAO;
-import DTO.CadastrarFuncionarioDTO;
+import DTO.FuncionariosDTO;
 import javax.swing.JOptionPane;
 
 /**
@@ -243,7 +243,7 @@ public class frmCadastrarFuncionarioVIEW extends javax.swing.JFrame {
 
         
 
-        CadastrarFuncionarioDTO objsignindto = new CadastrarFuncionarioDTO();
+        FuncionariosDTO objsignindto = new FuncionariosDTO();
         objsignindto.setFirstName(FirstName);
         objsignindto.setLastName(LastName);
         objsignindto.setUser(User);
