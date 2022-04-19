@@ -358,41 +358,45 @@ public class frmCadastrarClienteVIEW extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtCEPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCEPActionPerformed
+    private void txtDataNascimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDataNascimentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCEPActionPerformed
-
-    private void txtCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCPFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCPFActionPerformed
+    }//GEN-LAST:event_txtDataNascimentoActionPerformed
 
     private void txtDataNascimentoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDataNascimentoFocusLost
 
     }//GEN-LAST:event_txtDataNascimentoFocusLost
 
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        this.dispose();
-    }//GEN-LAST:event_btnCancelarActionPerformed
-
-    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-        try {
-            CadastrarCliente();
-        } catch (ParseException ex) {
-            Logger.getLogger(frmCadastrarClienteVIEW.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_btnSalvarActionPerformed
-
-    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
+    private void txtCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCPFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNomeActionPerformed
+    }//GEN-LAST:event_txtCPFActionPerformed
+
+    private void txtCEPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCEPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCEPActionPerformed
 
     private void txtCelularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCelularActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCelularActionPerformed
 
-    private void comboxUFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboxUFActionPerformed
+    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_comboxUFActionPerformed
+    }//GEN-LAST:event_txtNomeActionPerformed
+
+    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEmailActionPerformed
+
+    private void comboxEstadoCivilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboxEstadoCivilActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboxEstadoCivilActionPerformed
+
+    private void comboxGeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboxGeneroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboxGeneroActionPerformed
+
+    private void txtNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNumActionPerformed
 
     private void txtBairroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBairroActionPerformed
         // TODO add your handling code here:
@@ -402,25 +406,76 @@ public class frmCadastrarClienteVIEW extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEndereçoActionPerformed
 
-    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
+    private void comboxUFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboxUFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtEmailActionPerformed
+    }//GEN-LAST:event_comboxUFActionPerformed
 
-    private void txtDataNascimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDataNascimentoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDataNascimentoActionPerformed
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+        try {
+            CadastrarCliente();
+        } catch (ParseException ex) {
+            Logger.getLogger(frmCadastrarClienteVIEW.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+                if (txtNome.getText() .equals("") ) {
+JOptionPane.showMessageDialog(null, "Favor informar o nome", "Atenção", JOptionPane.WARNING_MESSAGE);
+return;
+}
+        
+        if (txtCPF.getText() .equals("   .   .   -  ") ) {
+JOptionPane.showMessageDialog(null, "Favor informar o CPF", "Atenção", JOptionPane.WARNING_MESSAGE);
+return;
+}
+        
+        if (txtDataNascimento.getText() .equals("  /  /    ") ) {
+JOptionPane.showMessageDialog(null, "Favor informar a data de nascimento", "Atenção", JOptionPane.WARNING_MESSAGE);
+return;
+}
+        
+        if (txtCelular.getText() .equals("(  )     -    ") ) {
+JOptionPane.showMessageDialog(null, "Favor informar o celular", "Atenção", JOptionPane.WARNING_MESSAGE);
+return;
+} // VERIFICAR
+        
+        if (txtEmail.getText() .equals("") ) {
+JOptionPane.showMessageDialog(null, "Favor informar o E-mail", "Atenção", JOptionPane.WARNING_MESSAGE);
+return;
+}
+        if (comboxGenero.getSelectedItem() == "--") { 
+JOptionPane.showMessageDialog(null, "Favor informar o genero", "Atenção", JOptionPane.WARNING_MESSAGE);
+return;
+}
+        if (txtEndereço.getText() .equals("") ) {
+JOptionPane.showMessageDialog(null, "Favor informar o endereço", "Atenção", JOptionPane.WARNING_MESSAGE);
+return;
+}
+        if (txtNum.getText() .equals("") ) {
+JOptionPane.showMessageDialog(null, "Favor informar o nº", "Atenção", JOptionPane.WARNING_MESSAGE);
+return;
+}
+        if (txtCEP.getText() .equals("     -   ") ) {
+JOptionPane.showMessageDialog(null, "Favor informar o CEP", "Atenção", JOptionPane.WARNING_MESSAGE);
+return;
+}
+        if (txtBairro.getText() .equals("") ) {
+JOptionPane.showMessageDialog(null, "Favor informar o bairro", "Atenção", JOptionPane.WARNING_MESSAGE);
+return;
+}
+        
+        if (comboxUF.getSelectedItem() == "--") { 
+JOptionPane.showMessageDialog(null, "Favor informar o UF", "Atenção", JOptionPane.WARNING_MESSAGE);
+return;
+}
+        
+        if (comboxEstadoCivil.getSelectedItem() == "--") { 
+JOptionPane.showMessageDialog(null, "Favor informar o estado civil", "Atenção", JOptionPane.WARNING_MESSAGE);
+return;
+}
+    }//GEN-LAST:event_btnSalvarActionPerformed
 
-    private void txtNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNumActionPerformed
-
-    private void comboxEstadoCivilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboxEstadoCivilActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_comboxEstadoCivilActionPerformed
-
-    private void comboxGeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboxGeneroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_comboxGeneroActionPerformed
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
     /**
      * @param args the command line arguments

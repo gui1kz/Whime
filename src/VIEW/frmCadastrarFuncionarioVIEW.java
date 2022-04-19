@@ -37,13 +37,13 @@ public class frmCadastrarFuncionarioVIEW extends javax.swing.JFrame {
         lblUserSign = new javax.swing.JLabel();
         txtUserSign = new javax.swing.JTextField();
         lblPasswordSign = new javax.swing.JLabel();
-        txtPasswordSign = new javax.swing.JTextField();
         btnSair = new javax.swing.JButton();
         btnSignIn = new javax.swing.JButton();
         lblCPF = new javax.swing.JLabel();
         txtCPF = new javax.swing.JFormattedTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        txtPasswordSign = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -79,13 +79,6 @@ public class frmCadastrarFuncionarioVIEW extends javax.swing.JFrame {
 
         lblPasswordSign.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPasswordSign.setText("Senha");
-
-        txtPasswordSign.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtPasswordSign.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPasswordSignActionPerformed(evt);
-            }
-        });
 
         btnSair.setBackground(new java.awt.Color(0, 70, 70));
         btnSair.setForeground(new java.awt.Color(255, 255, 255));
@@ -156,21 +149,20 @@ public class frmCadastrarFuncionarioVIEW extends javax.swing.JFrame {
                         .addComponent(btnSignIn)
                         .addGap(38, 38, 38))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(lblFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtFirstName, javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(lblCPF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtCPF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(lblPasswordSign, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtPasswordSign, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtCPF, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(lblUserSign, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtUserSign, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtUserSign, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(lblLastName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtLastName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txtLastName, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE))
+                            .addComponent(lblPasswordSign, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtPasswordSign, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGap(72, 72, 72))))
         );
         layout.setVerticalGroup(
@@ -219,10 +211,6 @@ public class frmCadastrarFuncionarioVIEW extends javax.swing.JFrame {
     private void txtUserSignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserSignActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUserSignActionPerformed
-
-    private void txtPasswordSignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordSignActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPasswordSignActionPerformed
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
         // TODO add your handling code here:
@@ -315,7 +303,7 @@ public class frmCadastrarFuncionarioVIEW extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField txtCPF;
     private javax.swing.JTextField txtFirstName;
     private javax.swing.JTextField txtLastName;
-    private javax.swing.JTextField txtPasswordSign;
+    private javax.swing.JPasswordField txtPasswordSign;
     private javax.swing.JTextField txtUserSign;
     // End of variables declaration//GEN-END:variables
 }
