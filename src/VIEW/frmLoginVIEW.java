@@ -32,18 +32,40 @@ public class frmLoginVIEW extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel2 = new javax.swing.JPanel();
+        txtUsuario = new javax.swing.JTextField();
+        lblLogin = new javax.swing.JLabel();
+        lblCreateAccount = new java.awt.Label();
         btnEntrar = new javax.swing.JButton();
         lblEsqueceuSuaSenha = new javax.swing.JLabel();
         txtSenha = new javax.swing.JPasswordField();
         lblSenha = new javax.swing.JLabel();
-        txtUsuario = new javax.swing.JTextField();
-        lblLogin = new javax.swing.JLabel();
-        lblCreateAccount = new java.awt.Label();
-        jPanel1 = new javax.swing.JPanel();
-        lblBemVindo = new javax.swing.JLabel();
-        lblAcesseOWhime = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
+
+        jPanel2.setBackground(new java.awt.Color(166, 166, 166));
+
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsuarioActionPerformed(evt);
+            }
+        });
+
+        lblLogin.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
+        lblLogin.setForeground(new java.awt.Color(255, 255, 255));
+        lblLogin.setText("Login: ");
+
+        lblCreateAccount.setAlignment(java.awt.Label.CENTER);
+        lblCreateAccount.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblCreateAccount.setForeground(new java.awt.Color(255, 255, 255));
+        lblCreateAccount.setText("Não possui conta? Cadastre-se gratuitamente!");
+        lblCreateAccount.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblCreateAccountMouseClicked(evt);
+            }
+        });
 
         btnEntrar.setBackground(new java.awt.Color(0, 70, 70));
         btnEntrar.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
@@ -56,79 +78,48 @@ public class frmLoginVIEW extends javax.swing.JFrame {
         });
 
         lblEsqueceuSuaSenha.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        lblEsqueceuSuaSenha.setForeground(new java.awt.Color(255, 255, 255));
         lblEsqueceuSuaSenha.setText("Esqueci minha senha");
 
-        lblSenha.setFont(new java.awt.Font("Segoe UI Emoji", 0, 14)); // NOI18N
+        lblSenha.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
+        lblSenha.setForeground(new java.awt.Color(255, 255, 255));
         lblSenha.setText("Senha: ");
 
-        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsuarioActionPerformed(evt);
-            }
-        });
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VIEW/images/whimeLogo (1).png"))); // NOI18N
 
-        lblLogin.setFont(new java.awt.Font("Segoe UI Emoji", 0, 14)); // NOI18N
-        lblLogin.setText("Login: ");
-
-        lblCreateAccount.setAlignment(java.awt.Label.CENTER);
-        lblCreateAccount.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblCreateAccount.setText("Não possui conta? Crie já!");
-        lblCreateAccount.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblCreateAccountMouseClicked(evt);
-            }
-        });
-
-        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
-
-        lblBemVindo.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        lblBemVindo.setForeground(new java.awt.Color(255, 255, 255));
-        lblBemVindo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblBemVindo.setText("Login");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblBemVindo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addComponent(lblBemVindo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        lblAcesseOWhime.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
-        lblAcesseOWhime.setForeground(new java.awt.Color(0, 153, 153));
-        lblAcesseOWhime.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblAcesseOWhime.setText("ACESSE O WHIME");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblCreateAccount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(272, 272, 272)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblLogin)
                     .addComponent(lblSenha)
                     .addComponent(txtSenha)
                     .addComponent(btnEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblEsqueceuSuaSenha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtUsuario, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblCreateAccount, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE))
-                .addContainerGap(62, Short.MAX_VALUE))
-            .addComponent(lblAcesseOWhime, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtUsuario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(273, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblAcesseOWhime)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(20, 20, 20)
+                .addComponent(lblCreateAccount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51)
                 .addComponent(lblLogin)
                 .addGap(2, 2, 2)
                 .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -140,9 +131,24 @@ public class frmLoginVIEW extends javax.swing.JFrame {
                 .addComponent(lblEsqueceuSuaSenha)
                 .addGap(24, 24, 24)
                 .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22)
-                .addComponent(lblCreateAccount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(68, 68, 68))
+                .addGap(33, 33, 33))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -201,9 +207,8 @@ public class frmLoginVIEW extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEntrar;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblAcesseOWhime;
-    private javax.swing.JLabel lblBemVindo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel2;
     private java.awt.Label lblCreateAccount;
     private javax.swing.JLabel lblEsqueceuSuaSenha;
     private javax.swing.JLabel lblLogin;
